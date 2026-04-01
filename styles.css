@@ -509,6 +509,44 @@ textarea:focus {
   gap: var(--space-3);
 }
 
+.footer-socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.social-link:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  border-color: rgba(236, 55, 80, 0.35);
+  box-shadow: 0 4px 12px rgba(31, 45, 61, 0.1);
+}
+
+.social-link svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+.social-link img {
+  display: block;
+  width: 26px;
+  height: 26px;
+}
+
 .footer-links a {
   color: var(--muted);
 }
