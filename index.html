@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GHS Hack CLub</title>
+    <meta name="description" content="A simple modern website template." />
+    <link rel="stylesheet" href="https://css.hackclub.com/theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Go to home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">GHS Hack Club</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link is-active" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="join.html">Join</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>GHS Hack Club</h1>
+            <p class="lead">
+              An official branh of Hack Club, a global nonprofit network of clubs whare teens learn to code, design and biuld projects together.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="about.html">Learn more</a>
+              <a class="btn btn-ghost" href="join.html">Join</a>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-hidden="true">
+            <div class="stat">
+              <div class="stat-label">Who</div>
+              <div class="stat-value">Teenagers 13-18</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">What</div>
+              <div class="stat-value">Recorces, and rewards for projects you biuld</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">When</div>
+              <div class="stat-value">Lunch on Tuesdays and Thursdays In the Makerspace (042)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Projects</h2>
+
+          <div class="grid">
+            <article class="card">
+              <h3>Boba Drops</h3>
+              <p>
+                A chance for our members to learn how to code a website useing HTML and CSS. After thay finish we have a boba party!
+              </p>
+              <a class="text-link" href="about.html">Read more</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year">2026</span> GHS Hack Club. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="Join.html">Join</a>
+        </div>
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>
