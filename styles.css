@@ -108,6 +108,14 @@ a:hover {
   backdrop-filter: blur(10px);
   background: rgba(249, 250, 252, 0.82);
   border-bottom: 1px solid var(--border);
+  transition: transform 220ms ease, opacity 220ms ease;
+  will-change: transform, opacity;
+}
+
+.site-header.is-hidden {
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header-inner {
@@ -132,6 +140,31 @@ a:hover {
   border-radius: 4px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   box-shadow: 0 0 0 3px rgba(236, 55, 80, 0.12);
+}
+
+.hc-flag {
+  position: fixed;
+  top: 0;
+  left: 8px;
+  border: 0;
+  height: 64px;
+  width: auto;
+  max-height: 100%;
+  z-index: 999;
+  transition: transform 220ms ease, opacity 220ms ease;
+  will-change: transform, opacity;
+}
+
+.hc-flag img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.hc-flag.is-hidden {
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .nav {
@@ -510,5 +543,9 @@ textarea:focus {
   .form-embed iframe {
     max-width: 100%;
     height: 2400px;
+  }
+
+  .hc-flag {
+    height: 56px;
   }
 }

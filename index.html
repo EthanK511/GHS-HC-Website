@@ -10,10 +10,10 @@
   </head>
 
   <body>
+    <a class="hc-flag" href="https://hackclub.com/"><img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club"/></a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Go to home">
-          <span class="brand-mark" aria-hidden="true"></span>
           <span class="brand-name">GHS Hack Club</span>
         </a>
 
@@ -84,6 +84,42 @@
       </div>
       <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      <script>
+        (() => {
+          const header = document.querySelector(".site-header");
+          const flag = document.querySelector(".hc-flag");
+          if (!header) return;
+
+          let lastScrollY = window.scrollY;
+          let ticking = false;
+
+          const updateHeader = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY <= 20 || currentScrollY < lastScrollY) {
+              header.classList.remove("is-hidden");
+              flag?.classList.remove("is-hidden");
+            } else if (currentScrollY > lastScrollY) {
+              header.classList.add("is-hidden");
+              flag?.classList.add("is-hidden");
+            }
+
+            lastScrollY = currentScrollY;
+            ticking = false;
+          };
+
+          window.addEventListener(
+            "scroll",
+            () => {
+              if (!ticking) {
+                window.requestAnimationFrame(updateHeader);
+                ticking = true;
+              }
+            },
+            { passive: true }
+          );
+        })();
       </script>
     </footer>
   </body>
