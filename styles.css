@@ -74,6 +74,11 @@ a:hover {
   color: var(--muted);
 }
 
+.form-link {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .lead {
   font-size: 1.1rem;
   color: var(--muted);
